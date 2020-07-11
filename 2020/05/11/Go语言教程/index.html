@@ -1,161 +1,202 @@
-
-
-
-
-
-
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <meta name="author" content="John Doe">
-  
-  
-  
-  
-    <meta name="description" content="Chapter1：Golang开篇终于等到你！Go语言——让你用写Python代码的开发效率编写C语言代码
-Golang方向
-区块链研发工程师
+    <meta charset="utf-8" />
 
-Go服务器端/游戏软件工程师
+    
 
-Golang分布式/云计算软件工程师（消息系统）
+    
+    <title>Go语言教程 | Kevin Blog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="" />
+    
+    <meta name="description" content="Chapter1：Golang开篇终于等到你！Go语言——让你用写Python代码的开发效率编写C语言代码 Golang方向 区块链研发工程师  Go服务器端&#x2F;游戏软件工程师  Golang分布式&#x2F;云计算软件工程师（消息系统）   Golang应用领域 区块链应用（分布式账本技术，去中心化，每个人均可参与数据库记录）  后端服务器应用（美团后台流量支撑程序-排序推荐搜索）  云计算&#x2F;云服务后台应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go语言教程">
+<meta property="og:url" content="https://kevin2018pg.github.io/2020/05/11/Go%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Kevin Blog">
+<meta property="og:description" content="Chapter1：Golang开篇终于等到你！Go语言——让你用写Python代码的开发效率编写C语言代码 Golang方向 区块链研发工程师  Go服务器端&#x2F;游戏软件工程师  Golang分布式&#x2F;云计算软件工程师（消息系统）   Golang应用领域 区块链应用（分布式账本技术，去中心化，每个人均可参与数据库记录）  后端服务器应用（美团后台流量支撑程序-排序推荐搜索）  云计算&#x2F;云服务后台应用">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:%5CUsers%5C86135.LAPTOP-5D276QMN%5CDesktop%5C15511649241043.jpg">
+<meta property="article:published_time" content="2020-05-11T10:56:58.277Z">
+<meta property="article:modified_time" content="2020-05-11T09:56:39.552Z">
+<meta property="article:author" content="Kevin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5C86135.LAPTOP-5D276QMN%5CDesktop%5C15511649241043.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="Kevin Blog" type="application/atom+xml" />
+    
+
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
 
-Golang应用领域
-区块链应用（分布式账本技术，去中心化，每个人均可参与数据库记录）
+    
+<link rel="stylesheet" href="/css/style.css">
 
-后端服务器应用（美团后台流量支撑程序-排序推荐搜索）
 
-云计算/云服务后...">
-  
-  <title>Go语言教程 [ Kevin Blog ]</title>
-  
-  
-    <link rel="shortcut icon" href="/hollow.ico">
-  
-  
-  
-<link rel="stylesheet" href="/css/random.css">
-<link rel="stylesheet" href="/css/vegas.min.css">
-<link rel="stylesheet" href="/css/highlight-railscasts.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
-<link rel="stylesheet" href="/css/iconfont/iconfont.css">
-<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
-<link rel="stylesheet" href="/css/plyr.css">
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
 
-  
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
-<div class="side-navigate hide-area">
-  
-    <div class="item prev">
-      <a href="/2020/05/11/Transformer%E4%B8%8EBERT%E6%A8%A1%E5%9E%8B/">
-        <div class="item-icon"></div>
-      </a>
-      <div class="item-title">
-        Transformer与BERT模型
-      </div>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
-  
-  
-    <div class="item next">
-      <a href="/2020/05/11/LeetCode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%A2%98%E8%A7%A3/">
-        <div class="item-icon"></div>
-      </a>
-      <div class="item-title">
-        LeetCode动态规划题解
-      </div>
-    </div>
-  
 </div>
-<div id="outer-container" class="hide-area">
-<div id="container">
-  <div id="menu-outer" class="slide-down">
-    <div id="menu-inner">
-      <div id="brand">
-        
-        <a onClick="openUserCard()">
-          <img id="avatar" src="https://avatars2.githubusercontent.com/u/2735087?s=60&u=775d4033139cae6b23c593bcf59fa433224ba4e3&v=4"/>
-          <div id="homelink">Kevin Blog</div>
-        </a>
-      </div>
-      <div id="menu-list">
-        <ul>
-        
-        
-          
-            <li>
-          
-            <a href="/index.html">Home</a>
-            
-          </li>
-        
-          
-            <li>
-          
-            <a href="/archives">Archives</a>
-            
-          </li>
-        
-          
-            <li>
-          
-            <a href="/tags">Tags</a>
-            
-          </li>
-        
-          
-            <li>
-          
-            <a href="/categories">Categories</a>
-            
-          </li>
-        
-          
-            <li>
-          
-            <a href="/about">About</a>
-            
-          </li>
-        
-          
-            <li>
-          
-            <a href="https://github.com/kevin2018pg" target="_blank" rel="noopener">Github</a>
-            
-          </li>
-        
-        </ul>
-      </div>
-      <div id="show-menu">
-        <button>Menu</button>
-      </div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div id="content-outer">
-    <div id="content-inner">
-      
-      
-  
-
-  <article id="post">
-    <h1>Go语言教程</h1>
-    <p class="page-title-sub">
-      <span id = "post-title-date">Created at 2020-05-11</span>
-      
-        <span id = "post-title-updated">Updated at 2020-05-11</span>
-      
-      
-      
-    </p>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
     
-    <h1 id="Chapter1：Golang开篇"><a href="#Chapter1：Golang开篇" class="headerlink" title="Chapter1：Golang开篇"></a>Chapter1：Golang开篇</h1><p><strong>终于等到你！Go语言——让你用写Python代码的开发效率编写C语言代码</strong></p>
+    uncategorized
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Go语言教程" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Go语言教程
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/2020/05/11/Go%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" class="article-date">
+         <time datetime="2020-05-11T10:56:58.277Z" itemprop="datePublished">2020-05-11</time>
+      </a>
+    </div>
+
+
+                
+
+                
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <h1 id="Chapter1：Golang开篇"><a href="#Chapter1：Golang开篇" class="headerlink" title="Chapter1：Golang开篇"></a>Chapter1：Golang开篇</h1><p><strong>终于等到你！Go语言——让你用写Python代码的开发效率编写C语言代码</strong></p>
 <h2 id="Golang方向"><a href="#Golang方向" class="headerlink" title="Golang方向"></a>Golang方向</h2><ol>
 <li><p>区块链研发工程师</p>
 </li>
@@ -2194,191 +2235,386 @@ Golang应用领域
 
 
 
-  </article>
-  <div class="random-toc-area">
-  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
-  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
-  <div class="random-toc">
-    <h2>Table of Content</h2>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter1：Golang开篇"><span class="toc-text">Chapter1：Golang开篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Golang方向"><span class="toc-text">Golang方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Golang应用领域"><span class="toc-text">Golang应用领域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Go语言特点"><span class="toc-text">Go语言特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#goroutine特点"><span class="toc-text">goroutine特点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter2：搭建Go开发环境"><span class="toc-text">Chapter2：搭建Go开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载安装"><span class="toc-text">下载安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载地址"><span class="toc-text">下载地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux下安装"><span class="toc-text">Linux下安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Go配置环境变量"><span class="toc-text">Go配置环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GOPROXY"><span class="toc-text">GOPROXY</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Go语言快速入门"><span class="toc-text">Go语言快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开发目录结构"><span class="toc-text">开发目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发步骤"><span class="toc-text">开发步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go执行流程分析"><span class="toc-text">Go执行流程分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译和运行说明"><span class="toc-text">编译和运行说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#跨平台编译"><span class="toc-text">跨平台编译</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go语言开发注意事项"><span class="toc-text">Go语言开发注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go语言转义字符"><span class="toc-text">Go语言转义字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释与格式化"><span class="toc-text">注释与格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Golang官方指南"><span class="toc-text">Golang官方指南</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dos常用命令"><span class="toc-text">Dos常用命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter3：Golang变量和常量"><span class="toc-text">Chapter3：Golang变量和常量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标识符与关键字"><span class="toc-text">标识符与关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量介绍"><span class="toc-text">变量介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量使用注意事项"><span class="toc-text">变量使用注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量声明"><span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量初始化"><span class="toc-text">变量初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#类型推导"><span class="toc-text">类型推导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#短变量声明"><span class="toc-text">短变量声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多变量声明"><span class="toc-text">多变量声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#匿名变量"><span class="toc-text">匿名变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断变量类型"><span class="toc-text">判断变量类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常量"><span class="toc-text">常量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iota"><span class="toc-text">iota</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见的iota示例"><span class="toc-text">常见的iota示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量的数据类型"><span class="toc-text">变量的数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#整型"><span class="toc-text">整型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊整型"><span class="toc-text">特殊整型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点型"><span class="toc-text">浮点型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#复数"><span class="toc-text">复数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔型"><span class="toc-text">布尔型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符型（没有专门的字符型，使用byte来保存单个字母字符）"><span class="toc-text">字符型（没有专门的字符型，使用byte来保存单个字母字符）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串"><span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的常用操作"><span class="toc-text">字符串的常用操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#byte和rune类型"><span class="toc-text">byte和rune类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本数据类型的默认值"><span class="toc-text">基本数据类型的默认值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本数据类型的转换"><span class="toc-text">基本数据类型的转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本数据类型和string的转换"><span class="toc-text">基本数据类型和string的转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#派生-复杂类型"><span class="toc-text">派生&#x2F;复杂类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#指针（Pointer）"><span class="toc-text">指针（Pointer）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#基本介绍"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#错误示范"><span class="toc-text">错误示范</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#make"><span class="toc-text">make</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#值类型和引用类型"><span class="toc-text">值类型和引用类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标识符的命名规范"><span class="toc-text">标识符的命名规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组（Array）"><span class="toc-text">数组（Array）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#数组定义"><span class="toc-text">数组定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组的初始化"><span class="toc-text">数组的初始化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组的遍历"><span class="toc-text">数组的遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#多维数组"><span class="toc-text">多维数组</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组是值类型"><span class="toc-text">数组是值类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结构体（struct）"><span class="toc-text">结构体（struct）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#切片（slice）"><span class="toc-text">切片（slice）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#切片的定义"><span class="toc-text">切片的定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片的长度和容量"><span class="toc-text">切片的长度和容量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片表达式"><span class="toc-text">切片表达式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片再切片"><span class="toc-text">切片再切片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#make-函数构造切片"><span class="toc-text">make()函数构造切片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片的本质"><span class="toc-text">切片的本质</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#判断切片是否为空"><span class="toc-text">判断切片是否为空</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片不能直接比较"><span class="toc-text">切片不能直接比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片的赋值拷贝"><span class="toc-text">切片的赋值拷贝</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片遍历"><span class="toc-text">切片遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#append-方法为切片添加元素"><span class="toc-text">append()方法为切片添加元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片的扩容策略"><span class="toc-text">切片的扩容策略</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#copy-函数复制切片"><span class="toc-text">copy()函数复制切片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#切片删除元素"><span class="toc-text">切片删除元素</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#管道（Channel）"><span class="toc-text">管道（Channel）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接口（interface）"><span class="toc-text">接口（interface）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#map"><span class="toc-text">map</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#map定义"><span class="toc-text">map定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#map基本使用"><span class="toc-text">map基本使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#判断某个键是否存在"><span class="toc-text">判断某个键是否存在</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#map的遍历"><span class="toc-text">map的遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用delete-函数删除键值对"><span class="toc-text">使用delete()函数删除键值对</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#按照指定顺序遍历map"><span class="toc-text">按照指定顺序遍历map</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#元素为map类型的切片"><span class="toc-text">元素为map类型的切片</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#值为切片类型的map"><span class="toc-text">值为切片类型的map</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter4：Golang运算符"><span class="toc-text">Chapter4：Golang运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#算术运算符"><span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#赋值运算符"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较运算符-关系运算符"><span class="toc-text">比较运算符&#x2F;关系运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逻辑运算符"><span class="toc-text">逻辑运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#位运算符"><span class="toc-text">位运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他运算符"><span class="toc-text">其他运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符优先级"><span class="toc-text">运算符优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#键盘输入语句"><span class="toc-text">键盘输入语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进制"><span class="toc-text">进制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter5：Golang流程控制"><span class="toc-text">Chapter5：Golang流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-else分支控制"><span class="toc-text">if-else分支控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch分支控制"><span class="toc-text">switch分支控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍-1"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本语法"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch细节讨论"><span class="toc-text">switch细节讨论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch和if的比较"><span class="toc-text">switch和if的比较</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for循环控制"><span class="toc-text">for循环控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本语法-1"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项-1"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#while和do…while实现"><span class="toc-text">while和do…while实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while实现"><span class="toc-text">while实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do…while实现"><span class="toc-text">do…while实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多重循环控制"><span class="toc-text">多重循环控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍-2"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码案例"><span class="toc-text">代码案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跳转控制语句-break"><span class="toc-text">跳转控制语句-break</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跳转控制语句-continue"><span class="toc-text">跳转控制语句-continue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跳转控制语句-goto"><span class="toc-text">跳转控制语句-goto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跳转控制语句-return"><span class="toc-text">跳转控制语句-return</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter6：Golang函数"><span class="toc-text">Chapter6：Golang函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数-1"><span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍-3"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本语法-2"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-text">变量作用域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包"><span class="toc-text">包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#包的介绍"><span class="toc-text">包的介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包的使用及注意事项"><span class="toc-text">包的使用及注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数-调用机制"><span class="toc-text">函数-调用机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调用过程"><span class="toc-text">调用过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#return语句"><span class="toc-text">return语句</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数-递归调用"><span class="toc-text">函数-递归调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#斐波那契数列"><span class="toc-text">斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#台阶问题"><span class="toc-text">台阶问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码分析"><span class="toc-text">代码分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归重要原则"><span class="toc-text">递归重要原则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数注意事项和细节（重要）"><span class="toc-text">函数注意事项和细节（重要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#init函数"><span class="toc-text">init函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本介绍-4"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项和细节"><span class="toc-text">注意事项和细节</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#匿名函数"><span class="toc-text">匿名函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方式"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全局匿名函数"><span class="toc-text">全局匿名函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包"><span class="toc-text">闭包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#案例演示"><span class="toc-text">案例演示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#defer语句"><span class="toc-text">defer语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#defer的执行时机"><span class="toc-text">defer的执行时机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#defer经典案例"><span class="toc-text">defer经典案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#defer面试题"><span class="toc-text">defer面试题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内置函数"><span class="toc-text">内置函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#panic-recover"><span class="toc-text">panic&#x2F;recover</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter7：Golang结构体"><span class="toc-text">Chapter7：Golang结构体</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#类型别名和自定义类型"><span class="toc-text">类型别名和自定义类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义类型"><span class="toc-text">自定义类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型别名"><span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型定义和类型别名的区别"><span class="toc-text">类型定义和类型别名的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#struct结构体"><span class="toc-text">struct结构体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体的定义"><span class="toc-text">结构体的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体实例化"><span class="toc-text">结构体实例化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#匿名结构体"><span class="toc-text">匿名结构体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建指针类型结构体"><span class="toc-text">创建指针类型结构体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#取结构体的地址实例化"><span class="toc-text">取结构体的地址实例化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体初始化"><span class="toc-text">结构体初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体内存布局"><span class="toc-text">结构体内存布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#空结构体"><span class="toc-text">空结构体</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造函数"><span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法和接收者"><span class="toc-text">方法和接收者</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#指针类型接收者"><span class="toc-text">指针类型接收者</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#值类型的接收者"><span class="toc-text">值类型的接收者</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#什么时候应该使用指针类型接收者"><span class="toc-text">什么时候应该使用指针类型接收者</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任意类型添加方法"><span class="toc-text">任意类型添加方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体的匿名字段"><span class="toc-text">结构体的匿名字段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#嵌套结构体"><span class="toc-text">嵌套结构体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#嵌套匿名结构体"><span class="toc-text">嵌套匿名结构体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#嵌套结构体的字段名冲突"><span class="toc-text">嵌套结构体的字段名冲突</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构体的“继承”"><span class="toc-text">结构体的“继承”</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter8：Golang常用标准库"><span class="toc-text">Chapter8：Golang常用标准库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fmt"><span class="toc-text">fmt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#向外输出"><span class="toc-text">向外输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Print"><span class="toc-text">Print</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fprint"><span class="toc-text">Fprint</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sprint"><span class="toc-text">Sprint</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Errorf"><span class="toc-text">Errorf</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#格式化占位符"><span class="toc-text">格式化占位符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#通用占位符"><span class="toc-text">通用占位符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔型-1"><span class="toc-text">布尔型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#整型-1"><span class="toc-text">整型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点数与复数"><span class="toc-text">浮点数与复数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串和-byte"><span class="toc-text">字符串和[]byte</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指针"><span class="toc-text">指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#宽度标识符"><span class="toc-text">宽度标识符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他falg"><span class="toc-text">其他falg</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取输入"><span class="toc-text">获取输入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#fmt-Scan"><span class="toc-text">fmt.Scan</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fmt-Scanf"><span class="toc-text">fmt.Scanf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fmt-Scanln"><span class="toc-text">fmt.Scanln</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bufio-NewReader"><span class="toc-text">bufio.NewReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fscan系列"><span class="toc-text">Fscan系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sscan系列"><span class="toc-text">Sscan系列</span></a></li></ol></li></ol></li></ol></li></ol>
-  </div>
-</div>
+        </div>
+        <footer class="article-footer">
+            
 
-  
-<nav id="pagination">
-  
-    <a href="/2020/05/11/Transformer%E4%B8%8EBERT%E6%A8%A1%E5%9E%8B/" class="prev">&larr; Prev post Transformer与BERT模型</a>
-  
 
-  
 
-  
-    <a href="/2020/05/11/LeetCode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%A2%98%E8%A7%A3/" class="next">Next post LeetCode动态规划题解 &rarr;</a>
-  
+    <a data-url="https://kevin2018pg.github.io/2020/05/11/Go%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" data-id="ckcg19kh60000agtwhkiv9vsz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Kevin"
+        },
+        "headline": "Go语言教程",
+        "image": "https://kevin2018pg.github.ioC:%5CUsers%5C86135.LAPTOP-5D276QMN%5CDesktop%5C15511649241043.jpg",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2020-05-11",
+        "dateCreated": "2020-05-11",
+        "dateModified": "2020-05-11",
+        "url": "https://kevin2018pg.github.io/2020/05/11/Go语言教程/",
+        "description": "Chapter1：Golang开篇终于等到你！Go语言——让你用写Python代码的开发效率编写C语言代码
+Golang方向
+区块链研发工程师
+
+Go服务器端/游戏软件工程师
+
+Golang分布式/云计算软件工程师（消息系统）
+
+
+Golang应用领域
+区块链应用（分布式账本技术，去中心化，每个人均可参与数据库记录）
+
+后端服务器应用（美团后台流量支撑程序-排序推荐搜索）
+
+云计算/云服务后台应用",
+        "wordCount": 16830
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/05/11/LeetCode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%A2%98%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">LeetCode动态规划题解</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
 </nav>
 
-  <!-- JiaThis Button BEGIN -->
+    
+    <div class="widgets-container">
+        
+            
+                
 
-<!-- JiaThis Button END -->
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/05/11/Go%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" class="thumbnail">
+    
+    
+        <span style="background-image:url(C:%5CUsers%5C86135.LAPTOP-5D276QMN%5CDesktop%5C15511649241043.jpg)" alt="Go语言教程" class="thumbnail-image"></span>
+    
+    
+</a>
 
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2020/05/11/Go%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" class="title">Go语言教程</a></p>
+                            <p class="item-date"><time datetime="2020-05-11T10:56:58.277Z" itemprop="datePublished">2020-05-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2020/05/11/LeetCode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%A2%98%E8%A7%A3/" class="thumbnail">
+    
+    
+        <span style="background-image:url(C:%5CUsers%5C86135.LAPTOP-5D276QMN%5CDesktop%5C15511649241043.jpg)" alt="LeetCode动态规划题解" class="thumbnail-image"></span>
+    
+    
+</a>
 
-      
-      
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2020/05/11/LeetCode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E9%A2%98%E8%A7%A3/" class="title">LeetCode动态规划题解</a></p>
+                            <p class="item-date"><time datetime="2020-05-11T10:51:57.447Z" itemprop="datePublished">2020-05-11</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
     </div>
-  </div>
 
-  <div id="bottom-outer">
-    <div id="bottom-inner">
-      Site by John Doe using
-      <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random" target="_blank" rel="noopener">Random</a>
-      <br>
-      
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li></ul>
+        </div>
     </div>
-  </div>
-</div>
-
-</div>
 
 
-<div id="user-card">
-  <div class="center-field">
-    <img class="avatar" src="https://avatars2.githubusercontent.com/u/2735087?s=60&u=775d4033139cae6b23c593bcf59fa433224ba4e3&v=4">
-    <p id="description"></p>
-    <ul class="social-icon">
-  
-  
-    <li>
-      <a href="https://github.com/stiekel" target="_blank" rel="noopener">
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
         
-          <i class="icon iconfont github">&#xe606;</i>
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 Kevin</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://kevin2018pg.github.io/2020/05/11/Go%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
         
-      </a>
-    </li>
-  
-    <li>
-      <a href="http://weibo.com/sidcn" target="_blank" rel="noopener">
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
         
-          <i class="icon iconfont weibo">&#xe602;</i>
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
         
-      </a>
-    </li>
-  
-    <li>
-      <a href="histkc@gmail.com">
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
         
-          M
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
         
-      </a>
-    </li>
-  
-</ul>
-  </div>
-</div>
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
 
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
 
-<div id="btn-view">Hide</div>
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
 
-<script>
-// is trigger analytics / tongji script
-var isIgnoreHost = false;
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
 
-if(window && window.location && window.location.host) {
-  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
-    return 0 === window.location.host.indexOf(address);
-  });
-}
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
 
-var isTriggerAnalytics = !( true && isIgnoreHost );
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
 
-</script>
+    
+    
 
-
-
-
-  
-  
-    <script src="/js/jquery-2.2.3.min.js"></script>
-  
-    <script src="/js/vegas.min.js"></script>
-  
-    <script src="/js/random.js"></script>
-  
-    <script src="/js/highlight.pack.js"></script>
-  
-    <script src="/js/jquery.mousewheel.pack.js"></script>
-  
-    <script src="/js/jquery.fancybox.pack.js"></script>
-  
-    <script src="/js/jquery.fancybox-thumbs.js"></script>
-  
-    <script src="/js/plyr.js"></script>
-  
-
-<script>
-
-  // fancybox
-  var backgroundImages = [];
-  
-  $('#post').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
-      var alt = this.alt || this.title;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'post' + i);
-    });
-  });
-  $(".fancybox").fancybox();
-
-var vegasConfig = {"preload­Image":true,"transition":["flash"],"timer":true,"delay":1500000,"shuffle":true,"count":12};
-var unsplashConfig = {"gravity":"center"};
-// is show background images
-var turnoffBackgroundImage = false;
+    
+    
+    
 
 
 
+<!-- Custom Scripts -->
 
-var backgroundColor = "34495E";
+<script src="/js/main.js"></script>
 
-$(".fancybox-thumb").fancybox({
-  prevEffect: 'none',
-  nextEffect: 'none',
-  helpers: {
-    title: {
-      type: 'outside'
-    },
-    thumbs: {
-      width: 50,
-      height: 50
-    }
-  }
-});
 
-// show video with plyr
-$(".video-container iframe").each(function(i){
-  var url = $(this).attr('src');
-  var id = url.split('/').pop();
-  var plyrContainer = document.createElement('div');
-  plyrContainer.className = 'plyr';
-  var plyrElement = document.createElement('div');
-  plyrElement.dataset.videoId = id;
-  switch(true) {
-    case url.search('youtube.com') >= 0:
-      plyrElement.dataset.type = 'youtube';
-      break;
-    case url.search('vimeo.com') >= 0:
-      plyrElement.dataset.type = 'vimeo';
-      break;
-    default:
-      return;
-  };
-  plyrContainer.appendChild(plyrElement);
-  $(this).parent().html(plyrContainer);
-});
-plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
-</script>
 </body>
 </html>
-
